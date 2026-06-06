@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HACKED</title>
+    <style>
+        body {
+            background: black;
+            color: lime;
+            font-family: monospace;
+            text-align: center;
+            padding-top: 100px;
+        }
+        #text {
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title"></h1>
+    <p id="text"></p>
+
+<script>
+const titleText = "⚠️ MEG LETTÉL HACKELVE! ⚠️";
+const bodyText = "...vagy mégsem? \nEz csak egy prank volt lol .";
+
+let i = 0;
+function typeTitle() {
+    if (i < titleText.length) {
+        document.getElementById("title").innerHTML += titleText.charAt(i);
+        i++;
+        setTimeout(typeTitle, 80);
+    } else {
+        typeBody();
+    }
+}
+
+let j = 0;
+function typeBody() {
+    if (j < bodyText.length) {
+        document.getElementById("text").innerHTML += bodyText.charAt(j);
+        j++;
+        setTimeout(typeBody, 50);
+    }
+}
+
+typeTitle();
+</script>
+
+</body>
+</html>
